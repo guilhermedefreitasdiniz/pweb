@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 3s;
+}
+
+.picker-area {
+    text-align: center; /*pra deixar no meio*/
+}
+
+.hands {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.hands img {
+    width: 100px;
+    height: auto;
+    border: 2px solid white;
+    opacity: 0.5;
+}
+
+.hands img:hover {
+    cursor: pointer;
+    border: 2px solid grey;
+    opacity: 1;
+}
+
+.hands img:active {
+    cursor: pointer;
+    border: 2px solid red;
+    opacity: 1;
+}
+
+#player-choice img {
+    width: 140px;
+    height: auto;
+    border: 2px solid white;
+    opacity: 1;
+}
+
+/*=======================robo=======================*/
+
+#robot-choice img {
+    width: 140px;
+    height: auto;
+    border: 2px solid white;
+    opacity: 1;
+}
+
+.robot-hand {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100px;
+    margin-top: 60px;
+    opacity: 0;
+}
+
+.robot-hand img {
+    width: 100px; 
+    height: auto;
+    transform: 0.3s ease, fill 0.3s ease;
+}

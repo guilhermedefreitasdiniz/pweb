@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel, Tesoura</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="picker-area">
+        <h1>Escolha entre pedra, papel ou tesoura.</h1>
+        <div class="hands">
+            <img src="images/fist.png" alt="pedra" onclick="jogarPedra()">
+            <img src="images/hand.png" alt="papel" onclick="jogarPapel()">
+            <img src="images/v.png" alt="tesoura" onclick="jogarTesoura()">
+        </div>
+        <h1 id="voceEscolheu">Você escolheu...</h1>
+        <div id="player-choice">
+            <img src="images/fist.png" alt="jogada" id="player-hand">
+        </div>
+
+        <h1 id="roboEscolheu">O robô escolheu...</h1>
+        <div id="robot-choice">
+            <img src="images/fist.png" alt="jogada-robo" id="robot-hand">
+            <h1 id="resultado">Feito por Guilherme</h1>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
