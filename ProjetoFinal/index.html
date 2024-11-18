@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kanban</title>
+</head>
+
+<body>
+    <header class="logo-container">
+        <h1>
+            <img src="svg/logo.svg">
+        </h1>
+    </header>
+    <div class="big-big-container">
+        <div class="quadro-big-container">
+            <div class="search-bar-container">
+                <input class="sax" type="text" id="search-bar" placeholder="Busque por tarefas...">
+                <button class="add-task-button">+ Adicionar...</button>
+                <img class="engrenagem-sr" src="svg/settings-svgrepo-com.svg" width="50px">
+            </div>
+            <div class="quadro-container">
+
+                <div class="column" id="todo">
+                    <h2>A fazer</h2>
+                    <!--                <div class="task" draggable="true" data-priority="alta">Tarefa 1</div>
+                    <div class="task" draggable="true" data-priority="media">Tarefa 2</div>-->
+                </div>
+                <div class="column" id="in-progress">
+                    <h2>Em andamento</h2>
+                    <!--                <div class="task" draggable="true" data-priority="urgente">Tarefa 3</div>
+                    <div class="task" draggable="true" data-priority="baixa">Tarefa 4</div>-->
+                </div>
+                <div class="column" id="done">
+                    <h2>Concluído</h2><!--                <div class="task" draggable="true" data-priority="urgente">Tarefa 5</div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="task-popup" class="popup hidden">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Adicionar Tarefa</h3>
+                <button class="close-popup">&times;</button>
+            </div>
+            <form id="task-form">
+                <input class="sax" type="text" id="task-title" placeholder="Título da Tarefa" required>
+                <textarea class="sax" id="task-description" placeholder="Descrição (opcional)"></textarea>
+                <input class="sax" type="text" id="task-responsible" placeholder="Responsável (opcional)">
+                <input class="sax" type="date" id="task-deadline" placeholder="Data Limite (opcional)">
+                <select class="sax" id="task-priority">
+                    <option class="sax" value="baixa">Prioridade Baixa</option>
+                    <option class="sax" value="media">Prioridade Média</option>
+                    <option class="sax" value="alta">Prioridade Alta</option>
+                    <option class="sax" value="urgente">Urgente</option>
+                </select>
+                <button type="submit" class="add-task-popup-button">Adicionar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="settings-popup" class="popup hidden">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="sax">Configurações</h3>
+                <button class="close-popup">&times;</button>
+            </div>
+            <form id="settings-form">
+                <label class="sax" for="theme-select">Tema:</label>
+                <select class="sax" id="theme-select">
+                    <option class="sax" value="claro">Claro</option>
+                    <option class="sax" value="escuro">Escuro</option>
+                </select>
+                <button class="sax" type="submit" class="save-settings-button">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
